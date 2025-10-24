@@ -1,8 +1,369 @@
-<p>Hello 大家好</p>
-<p>我是霸都丶傲天，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论文补充材料展示</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* 标题样式 */
+        h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #2980b9;
+            margin: 2rem 0 1rem;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: #34495e;
+            margin: 1.5rem 0 0.8rem;
+        }
+        
+        /* 段落和文本样式 */
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        /* 内容卡片样式 */
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        /* 视频容器样式 */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 宽高比 */
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #f1f8ff;
+        }
+        
+        /* 图片样式 */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+        
+        /* 解释框样式 */
+        .explanation {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        /* 代码块样式 */
+        .prompt-container {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>论文题目：人工智能在医学影像分析中的应用研究</h1>
+    </header>
+    
+    <main>
+        <!-- Abstract 部分 -->
+        <section class="section">
+            <h2>Abstract</h2>
+            <p>
+                本论文探讨了人工智能技术在医学影像分析领域的应用现状与发展趋势。通过深度学习模型，我们实现了对X光片、CT扫描和MRI图像的自动分析与诊断辅助。研究结果表明，AI系统在特定疾病的检测准确率上可以达到甚至超过专业放射科医生的水平。本文详细介绍了我们的模型架构、训练方法以及在多个数据集上的验证结果。
+            </p>
+            <p>
+                此外，我们还讨论了AI辅助诊断系统在实际临床应用中的挑战与机遇，包括数据隐私、模型可解释性以及人机协作等问题。本研究为医学影像AI的进一步发展提供了理论与实践基础。
+            </p>
+        </section>
+        
+        <!-- 视频与视频解释部分 -->
+        <section class="section">
+            <h2>视频演示</h2>
+            <div class="video-container">
+                <!-- 这里替换为您的视频链接 -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="论文演示视频" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div class="explanation">
+                <h3>视频解释</h3>
+                <p>本视频展示了我们的AI系统在实际医学影像分析中的应用过程。视频首先展示了系统对正常与异常X光片的识别，随后详细演示了系统如何标记可疑区域并提供诊断建议。视频后半部分展示了系统与放射科医生的交互界面，说明了AI如何辅助医生提高诊断效率和准确性。</p>
+            </div>
+        </section>
+        
+        <!-- 表格1与表格1解释 -->
+        <section class="section">
+            <h2>表格1：模型性能比较</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>模型类型</th>
+                        <th>准确率</th>
+                        <th>召回率</th>
+                        <th>F1分数</th>
+                        <th>训练时间(小时)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ResNet-50</td>
+                        <td>92.3%</td>
+                        <td>89.7%</td>
+                        <td>90.9%</td>
+                        <td>24.5</td>
+                    </tr>
+                    <tr>
+                        <td>Inception-v3</td>
+                        <td>93.1%</td>
+                        <td>91.2%</td>
+                        <td>92.1%</td>
+                        <td>28.3</td>
+                    </tr>
+                    <tr>
+                        <td>EfficientNet-B4</td>
+                        <td>95.4%</td>
+                        <td>93.8%</td>
+                        <td>94.6%</td>
+                        <td>32.7</td>
+                    </tr>
+                    <tr>
+                        <td>我们的模型</td>
+                        <td>96.8%</td>
+                        <td>95.2%</td>
+                        <td>96.0%</td>
+                        <td>35.2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="explanation">
+                <h3>表格1解释</h3>
+                <p>本表格比较了不同深度学习模型在医学影像分类任务上的性能表现。我们的模型在准确率、召回率和F1分数上均优于其他基准模型，尽管训练时间略长。这些结果表明我们提出的架构改进有效提升了模型性能，特别是在处理医学影像这种需要高精度的任务中。</p>
+            </div>
+        </section>
+        
+        <!-- 表格2与表格2解释 -->
+        <section class="section">
+            <h2>表格2：不同疾病类型的检测结果</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>疾病类型</th>
+                        <th>样本数量</th>
+                        <th>AI检测准确率</th>
+                        <th>医生检测准确率</th>
+                        <th>AI+医生检测准确率</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>肺炎</td>
+                        <td>1,245</td>
+                        <td>94.2%</td>
+                        <td>92.8%</td>
+                        <td>97.5%</td>
+                    </tr>
+                    <tr>
+                        <td>肺结节</td>
+                        <td>876</td>
+                        <td>91.7%</td>
+                        <td>93.5%</td>
+                        <td>96.8%</td>
+                    </tr>
+                    <tr>
+                        <td>骨折</td>
+                        <td>543</td>
+                        <td>96.3%</td>
+                        <td>95.1%</td>
+                        <td>98.2%</td>
+                    </tr>
+                    <tr>
+                        <td>脑出血</td>
+                        <td>432</td>
+                        <td>89.5%</td>
+                        <td>91.2%</td>
+                        <td>95.7%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="explanation">
+                <h3>表格2解释</h3>
+                <p>本表格展示了我们的AI系统在不同疾病类型检测任务上的表现，并与专业医生的诊断结果进行了比较。值得注意的是，在"AI+医生"模式下，诊断准确率显著高于单独使用AI或医生诊断，这证明了AI辅助诊断系统的实际价值。特别是在骨折检测任务中，AI系统表现优异，可能因为骨折在影像中具有较为明显的特征。</p>
+            </div>
+        </section>
+        
+        <!-- 图片与图片解释 -->
+        <section class="section">
+            <h2>关键结果可视化</h2>
+            <div class="image-container">
+                <!-- 这里替换为您的图片路径 -->
+                <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=模型性能对比图" alt="模型性能对比图">
+                <p class="image-caption">图1：不同模型在测试集上的性能对比</p>
+            </div>
+            <div class="explanation">
+                <h3>图片解释</h3>
+                <p>此图展示了我们提出的模型与三种基准模型在测试集上的性能对比。从图中可以直观看出，我们的模型在所有评估指标上均表现最佳。特别值得注意的是，我们的模型在保持高召回率的同时，也实现了较高的准确率，这对于医学诊断应用至关重要，因为漏诊（低召回率）和误诊（低准确率）都会带来严重的临床后果。</p>
+            </div>
+        </section>
+        
+        <!-- Prompt内容与解释 -->
+        <section class="section">
+            <h2>Prompt设计与分析</h2>
+            <div class="prompt-container">
+                <pre>
+# 医学影像分析提示词设计
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/AJLoveChina">知乎</a> </li>
-  <li> <a href="http://hejie.nigeerhuo.com">我的博客(已经不更细了,现在在知乎写文章)</a> </li>
-</ul>
+## 基础提示词结构
+1. 图像类型指定: [X-ray/CT/MRI] of [body part]
+2. 临床问题描述: [suspected condition] detection/classification
+3. 输出格式要求: [bounding boxes/heatmaps/classification probabilities]
+
+## 示例提示词
+"Analyze this chest X-ray for signs of pneumonia. 
+Highlight suspicious areas with bounding boxes and 
+provide confidence scores for each finding."
+
+## 模型响应规范
+- 正常/异常判断
+- 异常区域定位与描述
+- 严重程度评估
+- 鉴别诊断建议
+                </pre>
+            </div>
+            <div class="explanation">
+                <h3>Prompt解释</h3>
+                <p>本部分展示了我们用于指导AI模型进行医学影像分析的提示词设计。精心设计的提示词对于获得准确、可靠的AI输出至关重要。我们的提示词结构包括三个核心部分：明确指定影像类型和身体部位、清晰描述临床问题、以及定义输出格式要求。这种结构化的提示词设计方法确保了模型能够理解任务需求并生成符合临床实际需要的输出。</p>
+                <p>此外，我们还制定了模型响应规范，确保AI输出不仅包含简单的分类结果，还提供定位信息、严重程度评估和鉴别诊断建议，这有助于医生全面理解AI的分析过程并做出最终诊断决策。</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #7f8c8d; font-size: 0.9rem;">
+        <p>© 2023 论文补充材料展示 | 本网站内容为论文《人工智能在医学影像分析中的应用研究》的补充材料</p>
+    </footer>
+</body>
+</html>
